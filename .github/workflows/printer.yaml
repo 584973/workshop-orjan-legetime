@@ -1,6 +1,6 @@
 name: Yo Mama
 
-on: 
+on:
   - pull_request
 
 jobs:
@@ -17,6 +17,32 @@ jobs:
 
       - name: Install deps
         run: npm ci
-      
-      - name: Builderino 
+
+      - name: Builderino
         run: npm run build
+
+  linter_job:
+    name: linterino
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Run linter
+        run: npm run lint:check
+
+  test_job:
+    name: linterino
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Run tests
+        run: npm run test
