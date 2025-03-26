@@ -35,7 +35,7 @@ jobs:
         run: npm run lint:check
 
   test_job:
-    name: linterino
+    name: testerino
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
