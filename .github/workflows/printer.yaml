@@ -11,3 +11,12 @@ jobs:
     steps:
       - name: Print message to terminal
         run: echo "Yo Mam"
+
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Install deps
+        run: npm ci
+      
+      - name: Builderino 
+        run: npm run build
