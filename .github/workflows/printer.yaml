@@ -1,0 +1,13 @@
+name: Yo Mama
+
+on: 
+  - pull_request
+
+jobs:
+  yo_mama_job:
+    name: Yo Mama
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print message to terminal
+        run: echo "Yo Mam"
