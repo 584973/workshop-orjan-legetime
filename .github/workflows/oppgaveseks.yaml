@@ -1,0 +1,21 @@
+name: Oppgaveseks
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  multidulti:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: What's the answer to life, the universe and everything?
+        id: whats-the-answer
+        run: |
+          echo "answer=42" >> "$GITHUB_OUTPUT"
+
+      - name: Use the answer
+        run: |
+          echo "The answer is ${{ steps.whats-the-answer.outputs.answer  }}"
